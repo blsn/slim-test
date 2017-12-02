@@ -53,23 +53,23 @@ class Controller
 /*
 class Controller
 {
-    //protected $request, $response, $args, $container;
-    protected $container;
+    protected $request, $response, $args, $container;
 
-    //public function __construct($request, $response, $args, $container) {
-    public function __construct($container) {        
-        //$this->request = $request;
-        //$this->response = $response;
-        //$this->args = $args;
+    public function __construct($request, $response, $args, $container) {
+        $this->request = $request;
+        $this->response = $response;
+        $this->args = $args;    
         $this->container = $container;
-        //echo '<pre>', var_dump($this->container), '</pre>';
-        //die;
     }
 
     public function __get($property) { // get() magic method
         if ($this->container->{$property}) {
             return $this->container->{$property};
         }
+    }
+
+    public function render($name, array $args = []) {
+        return $this->view->render($this->response, $name . '.twig', $args);
     }    
 }
 */

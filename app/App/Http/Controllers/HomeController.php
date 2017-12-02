@@ -46,14 +46,16 @@ class HomeController extends Controller
 }
 */
 
+/*
 class HomeController extends Controller
 {
     public function index($request, $response, $args) {
         return $this->render('home');
     }
 }
+*/
 
-/*
+
 use App\Http\Controllers\Controller;
 class HomeController extends Controller
 {
@@ -61,4 +63,3 @@ class HomeController extends Controller
         return $this->render('home');
     }
 }
-*/
