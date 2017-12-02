@@ -1,7 +1,8 @@
 <?php
 return [
     'settings' => [
-        'displayErrorDetails' => true,
+        //'displayErrorDetails' => false,
+        'displayErrorDetails' => getenv('APP_ENV') === "production" ? false : true,
     ],
 
     'view' => function($c) {
@@ -14,4 +15,22 @@ return [
         ));
         return $view;
     },
+
+    /*
+    'HomeController' => function($c) { 
+        return new App\Http\Controllers\HomeController;
+    }
+    */
+
+    /*
+    'HomeController' => function($c) { 
+        return new App\Http\Controllers\HomeController($c->view);
+    }
+    */
+    
+    /*
+    'HomeController' => function($c) { 
+        return new App\Http\Controllers\HomeController($c);
+    }
+    */    
 ];

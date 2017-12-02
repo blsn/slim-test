@@ -2,12 +2,18 @@
 
 session_start(); // set session
 
+use Dotenv\Dotenv;
 use App\App;
 use Slim\Container;
 
 define('INC_ROOT', __DIR__);
 
 require INC_ROOT . '/../vendor/autoload.php'; // upload dependencies
+
+if(file_exists(__DIR__ . '/../.env')) {
+    $env = new Dotenv(__DIR__ . '/../');
+    $env->load();
+}
 
 $app = new App(new Container(
     include INC_ROOT . '/container.php'
