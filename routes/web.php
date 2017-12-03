@@ -15,6 +15,7 @@ $app->get('/', function($request, $response) {
 //$app->get('/[{name}]', 'HomeController:index');
 
 //$app->get('/[{name}]', 'App\Http\Controllers\HomeController:index');
+
 $app->get('/[{name}]', 'App\Http\Controllers\HomeController:get');
 
 //$app->route(['GET'], '/', App\Http\Controllers\HomeController::class)->setName('home');
