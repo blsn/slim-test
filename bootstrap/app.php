@@ -3,6 +3,7 @@
 session_start(); // set session
 
 use Dotenv\Dotenv;
+use Noodlehaus\Config;
 use App\App;
 use Slim\Container;
 
@@ -40,5 +41,11 @@ $user = new \App\App;
 Var_dump($user);
 die();
 */
+
+$container['config'] = function($c) {
+    return new Config(INC_ROOT . '/../config');
+};
+
+$container['db']->bootEloquent();
 
 require INC_ROOT . '/../routes/web.php';

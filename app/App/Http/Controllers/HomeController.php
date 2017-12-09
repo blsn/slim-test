@@ -54,10 +54,21 @@ class HomeController extends Controller
     }
 }
 */
+/*
+class HomeController extends Controller
+{
+    public function get() {
+        return $this->render('home');
+    }
+}
+*/
 
 class HomeController extends Controller
 {
     public function get() {
+        $user = $this->db->table('users')->find(24); // test eloquent
+        var_dump($user->email);
+        //die();
         return $this->render('home');
     }
 }

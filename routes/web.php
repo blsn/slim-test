@@ -14,6 +14,8 @@ $app->get('/', function($request, $response) {
 
 //$app->get('/[{name}]', 'HomeController:index');
 
+//$app->get('/[{name}]', 'HomeController:get');
+
 //$app->get('/[{name}]', 'App\Http\Controllers\HomeController:index');
 
 $app->get('/[{name}]', 'App\Http\Controllers\HomeController:get');

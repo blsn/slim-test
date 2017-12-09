@@ -31,6 +31,14 @@ return [
     /*
     'HomeController' => function($c) { 
         return new App\Http\Controllers\HomeController($c);
-    }
-    */    
+    },
+    */
+
+    'db' => function($c) {
+        $capsule = new \Illuminate\Database\Capsule\Manager;
+        $capsule->addConnection($c['config']->get('database'), 'default');
+        $capsule->setAsGlobal(); 
+        return $capsule;
+    },
+        
 ];
