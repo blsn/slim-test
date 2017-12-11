@@ -83,7 +83,7 @@ class HomeController extends Controller
     public function get() {
         //$user = User::find(24);
         //var_dump($user);
-        $user = User::where('email', 'blsn2000@gmail.com')->first();
+        $user = User::where('email', 'mike@abc.com')->first();
         var_dump($user->email);
         return $this->render('home');
     }
